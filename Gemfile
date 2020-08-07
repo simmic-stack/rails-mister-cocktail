@@ -40,8 +40,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails'
 gem 'cloudinary', '~> 1.12.0'
+gem 'webpacker'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
