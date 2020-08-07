@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: "cocktails#index"
-  resources :cocktails, only: [:index, :show, :new, :create] do
+  root to: 'cocktails#index'
+  resources :cocktails, only: %i[index show new create destroy] do
     resources :doses, only: [:create]
     resources :reviews, only: [:create]
   end

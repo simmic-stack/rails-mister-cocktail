@@ -5,6 +5,9 @@
   background-position: center;
   color: white;
   position: relative;
+  border-radius:7px;
+    transition: transform .5s, filter 1.5s ease-in-out;
+  filter: grayscale(100%);
 }
 .card-description {
   position: absolute;
@@ -27,3 +30,10 @@
 .card-link:hover {
   opacity: 0.1;
 }
+
+.card:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+

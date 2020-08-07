@@ -12,6 +12,9 @@
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?cocktail');">
           <div class="card-description">
             <h2><%= cocktail.name %></h2>
+            <%= link_to dose_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } do %>
+            <i class="fas fa-trash"></i>
+            <% end %>
           </div>
           <%= link_to "", cocktail_path(cocktail), class: 'card-link' %>
         </div>

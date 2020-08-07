@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CocktailsController < ApplicationController
   def index
     @cocktails = Cocktail.all
@@ -20,6 +22,12 @@ class CocktailsController < ApplicationController
     else
       render 'new'
     end
+  end
+
+    def destroy
+    @cocktail = Cocktail.find(params[:id])
+    @cocktail.destroy
+    redirect_to cocktail_path(@cocktail)
   end
 
   private
